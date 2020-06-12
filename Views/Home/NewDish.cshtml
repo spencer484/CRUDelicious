@@ -1,0 +1,33 @@
+@model Dish
+<div class="row-text-center">
+    <h1>Add a New Dish!</h1>
+</div>
+
+@* <form asp-action="CreateDish" asp-controller="Home" method="POST"> *@
+<form action="dishes/create" method="POST">
+    <span asp-validation-for="Chef"></span>
+    <label>Chef's Name:</label>
+    <input asp-for="Chef">
+    <br>
+    <span asp-validation-for="Name"></span>
+    <label>Name of Dish</label>
+    <input asp-for="Name">
+    <br>
+    <span asp-validation-for="Calories"></span>
+    <label># of Calories</label>
+    <input asp-for="Calories">
+    <br>
+    <span asp-validation-for="Tastiness"></span>
+    <label>Tastiness</label>
+    <input asp-for="Tastiness">
+    <br>
+    <span asp-validation-for="Description"></span>
+    <label>Description</label>
+    <input asp-for="Description">
+    <br>
+    <button>Add Dish</button>
+</form>
+
+
+
+
